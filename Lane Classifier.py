@@ -111,7 +111,7 @@ model.summary()
 
 # Training our model
 model.compile(optimizer = 'Adam', loss = 'categorical_crossentropy', metrics=['accuracy'])
-model.fit_generator(train_batches,steps_per_epoch = len(imgs1)/100,validation_data = validation_batches                     ,validation_steps = len(imgs2)/10 ,epochs = epochs,verbose=2)
+model.fit_generator(train_batches,steps_per_epoch = len(imgs1)/100,validation_data = validation_batches                     ,validation_steps = len(imgs2)/10 ,epochs = 20,verbose=2)
 
 # Saving our model 
 model.save('lane_classifier.h5')
